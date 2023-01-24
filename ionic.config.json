@@ -1,0 +1,7 @@
+{
+  "name": "ionic-splash-loading",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
