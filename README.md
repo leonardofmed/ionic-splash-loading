@@ -1,7 +1,7 @@
 # ionic-splash-loading
 Experimental component for using loading animations together with asynchronous functions in an Ionic splash screen. This is useful for applications that need to load or synchronize data before the user can use it.
 
-<img src="/images/output/video1.gif" width="300" height="500"/>
+<img src="https://github.com/leonardofmed/ionic-splash-loading/blob/main/src/assets/emulator.gif)" width="300" height="500"/>
 
 ## How to run (Android)
 - Clone the repo and install dependencies with `npm i`;
