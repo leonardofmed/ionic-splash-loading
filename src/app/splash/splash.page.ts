@@ -44,10 +44,10 @@ export class SplashPage implements OnInit {
 	) {}
 
 	ngOnInit() {
-		//this.loadItems(this.itemsToLoad).then(() => {
+		this.loadItems(this.itemsToLoad).then(() => {
 			// Go to next page using navigateRoot because we don't want to return to this page and reload all data unnecessarily.
-		//	this.navController.navigateRoot("home", {animated: true, animationDirection: "forward"});
-		//});
+			this.navController.navigateRoot("home", {animated: true, animationDirection: "forward"});
+		});
 	}
 
 	/**
