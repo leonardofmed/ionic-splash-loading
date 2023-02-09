@@ -1,12 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
+
 @Component({
 	selector: 'app-splash',
 	templateUrl: './splash.page.html',
 	styleUrls: ['./splash.page.scss'],
 })
 export class SplashPage implements OnInit {
+
+	public animOptions: AnimationOptions = {
+		path: 'assets/loading_lottie.json'
+	};
 
 	public status: ProgressStatus = {
 		progress: 0,
@@ -37,10 +44,10 @@ export class SplashPage implements OnInit {
 	) {}
 
 	ngOnInit() {
-		this.loadItems(this.itemsToLoad).then(() => {
+		//this.loadItems(this.itemsToLoad).then(() => {
 			// Go to next page using navigateRoot because we don't want to return to this page and reload all data unnecessarily.
-			this.navController.navigateRoot("home", {animated: true, animationDirection: "forward"});
-		});
+		//	this.navController.navigateRoot("home", {animated: true, animationDirection: "forward"});
+		//});
 	}
 
 	/**
@@ -66,6 +73,11 @@ export class SplashPage implements OnInit {
 			console.log("this.status.progress: ", this.status.progress);
 			pos++;
 		}
+	}
+
+	public handleAnimation(anim: AnimationItem) {
+		console.log('animation handled: ', anim);
+		// We can get the animation reference here and manipule it (play, pause, speed..)
 	}
 }
 

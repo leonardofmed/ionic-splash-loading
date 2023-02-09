@@ -1,10 +1,17 @@
 <ion-content color="light">
+
+  <!-- Ion Logo -->
+  <ion-img class="logo" src="assets/ionic-logo.png"></ion-img>
+
   <ion-grid>
+    <!-- Lottie spinner animation  -->
     <ion-row>
-      <ion-col size="8" offset="2">
-        <ion-img src="assets/ionic-logo.png"></ion-img>
-      </ion-col>
+      <ion-col class="center-anim">
+        <ng-lottie style="width: 100%; height: 40vh;" [options]="animOptions" (animationCreated)="handleAnimation($event)" class="thumb-anim"></ng-lottie>
+      </ion-col>      
     </ion-row>
+    
+    <!-- Progress bar -->
     <ion-row class="bottom-row">
       <ion-col size="8" offset="2" class="ion-text-center">
         <ion-label color="medium">{{status.message}}</ion-label>
@@ -12,4 +19,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+
 </ion-content>
